@@ -1,0 +1,60 @@
+Algoritmo "Abastecimento_aeronaves"
+
+Var
+
+  media, capacMax, trechoPlanej, trechoAlter, trechoTotal: real
+  combustExist, combustTotal, abastecimento:real
+  
+  procedimento dados()
+  
+Inicio
+
+  escreva ("Digite a média da aeronave em litros por quilômetros:")
+  leia (media)
+  escreva ("Digite a capacidade máxima em litros do tanque:")
+  leia (capacMax)
+  escreva ("Digite a quantidade de quilômetros do trecho planejado:")
+  leia (trechoPlanej)
+  escreva ("Digite a quantidade de quilômetros do trecho alternativo:")
+  leia (trechoAlter)
+  escreva ("Digite a quantidade de combustível já na aeronave:")
+  leia (combustExist)
+  
+  Fimprocedimento
+  
+    procedimento verificarCapacidade()
+
+    Inicio
+
+       se (combustTotal > capacMax) então
+           escreval ("Voo reprovado, reveja seu planejamento!")
+       senão
+           escreval ("Voo aprovado, bom voo!")
+       Fimse
+
+    Fimprocedimento
+   
+     procedimento resultados()
+
+      Inicio
+
+     escreval ("Distância do trecho principal:", trechoPlanej)
+     escreval ("Distância do trecho alternativo:", trechoAlter)
+     escreval ("Distância do trecho total com margem:", combustTotal/media)
+     escreval ("Quantidade de combustível necessária:", combustTotal)
+     escreval ("Quantidade necessária para abastecimento:", abastecimento)
+     
+     Fimprocedimento
+     
+ Inicio
+
+     dados()
+     trechoTotal <- (trechoPlanej + trechoAlter) * 1.3
+     combustTotal <- trechoTotal * media
+     verificarCapacidade()
+     abastecimento <-combustTotal - combustExist
+       se (capacMax > combustTotal) então
+            resultados()
+       Fimse
+     
+Fimalgoritmo

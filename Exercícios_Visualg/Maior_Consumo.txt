@@ -1,0 +1,34 @@
+Algoritmo "maior_consumo"
+
+Var
+
+   N, i, litros, ApMaiorCons : inteiro
+   vet: vetor [1..10] de inteiro
+   m_cubicos, maiorVolume: real
+
+Inicio
+
+   Escreva ("Quantidade de apartamentos no prédio: ")
+   Leia (N)
+	
+   Para i de 1 até N faca
+     Escreva("Quantidade de consumo de água do apartamento", i, ": ")
+     Leia(vet[i])
+   Fim_para
+
+   maiorVolume <- vet[1]
+   ApMaiorCons <- 1
+
+   Para i de 1 até N faca
+     Se vet[i] > maiorVolume entao
+        maiorVolume <- vet[i]
+        ApMaiorCons <- i
+     Fim_se
+   Fim_para
+
+   m_cubicos <-maiorVolume/1000
+
+   Escreval("MAIOR CONSUMO = ",  maiorVolume,"L", " ou", m_cubicos, "m³.")
+   Escreva ("O apartamento", ApMaiorCons, " foi o que teve o maior consumo.")
+
+Fim

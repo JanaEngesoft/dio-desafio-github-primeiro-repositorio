@@ -1,0 +1,41 @@
+Algoritmo "notasAluno"
+// Disciplina   : [Linguagem e Lógica de Programação] 
+// Professor   : Antonio Carlos Nicolodi 
+
+Var
+
+  notasAlunos: vetor[1..5,1..4] de real
+  i,j:inteiro
+  soma, media: real
+
+Inicio
+
+  escreval("Bem-vindo ao algoritmo de Notas de Aluno!")
+
+  para i de 1 até 5 faça
+     escreval ("--------------------------")
+     escreval("Aluno número",i)
+       para j de 1 até 4 faça
+         escreva(" Digite a nota da prova", j, " do aluno", i, ": ")
+         leia(notasAlunos[i,j])
+       fimpara
+  fimpara
+  
+    soma <-0.0
+    media <-0.0
+    
+    para i de 1 ate 5 faça
+    soma <-0.0
+    media <-0.0
+      para j de 1 até 4 faça
+      soma <- soma + notasAlunos[i,j]
+      fimpara
+      media <-soma / 4
+      escreval ("--------------------------")
+      escreval ("A media do aluno ", i, " é", media)
+    
+    fimpara
+    
+
+
+Fimalgoritmo

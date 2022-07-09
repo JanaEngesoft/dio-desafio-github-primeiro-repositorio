@@ -1,0 +1,33 @@
+Algoritmo "pares_impares"
+
+Var
+
+   vet:vetor[1..42] de inteiro
+   i,pastopar,pastoimpar:inteiro
+
+Inicio
+
+   Para i de 1 ate 42 faca
+      Escreva("Digite o número do gado", i, ": ")
+      Leia(vet[i])
+   Fimpara
+   Escreval("-----------------------------------")
+   Escreval("NUMERAÇÃO DOS GADOS QUE IRÃO PARA O PASTO 1:")
+   Para i de 1 ate 42 faca
+      Se (vet[i] mod 2 = 0) entao
+         pastopar <- pastopar+1
+         Escreva(vet[i])
+      Fimse
+   Fimpara
+   Escreval
+   Escreval("-----------------------------------")
+   Escreval("NUMERAÇÃO DOS GADOS QUE IRÃO PARA O PASTO 2:")
+   Para i de 1 ate 42 faca
+       Se (vet[i] mod 2 <> 0) entao
+         pastoimpar <- pastoimpar+1
+         Escreva(vet[i])
+      Fimse
+   Fimpara
+
+
+Fimalgoritmo
