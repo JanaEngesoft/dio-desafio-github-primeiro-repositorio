@@ -1,0 +1,35 @@
+Algoritmo "CadastrarProduto"
+
+Tipo
+   produto = Registro
+      codigo: inteiro
+      quantidade: inteiro
+      nome: caractere
+      valorCusto: real
+      valorVenda: real
+   Fimregistro
+
+Var
+
+   lista_prod: vetor [1..10] de produto
+   i: inteiro
+
+Inicio
+
+   para i de 1 até 5 faça
+      escreval ("Cadastro de Produto")
+      escreva ("Digite o código do produto", i, ": ")
+      leia (lista_prod[i].codigo)
+      escreva ("Digite o nome do produto", i, ": ")
+      leia (lista_prod[i].nome)
+      escreva ("Digite o valor de custo", i, ": ")
+      leia (lista_prod[i].valorCusto)
+      escreva ("Digite o valor de venda", i, ": ")
+      leia (lista_prod[i].valorVenda)
+      escreva ("Digite a quantidade em estoque do produto", i, ": ")
+      leia (lista_prod[i].quantidade)
+      escreval("================================")
+   Fimpara
+
+
+Fimalgoritmo
